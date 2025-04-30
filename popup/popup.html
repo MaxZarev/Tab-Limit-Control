@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset='UTF-8'>
+  <title>Tab Limit Control</title>
+  <link rel='stylesheet' href='popup.css'>
+</head>
+<body>
+  <div class='container'>
+    <h1>Tab Limit Control</h1>
+    <div class='settings'>
+      <div class='input-group'>
+        <label for='tabLimit'>Лимит вкладок:</label>
+        <input type='number' id='tabLimit' min='1' max='100' value='20'>
+      </div>
+      <div class='current-tabs'>
+        <span>Текущее количество вкладок: </span>
+        <span id='currentTabCount'>0</span>
+      </div>
+      <button id='saveSettings'>Сохранить</button>
+      <button id='closeOtherTabs' class='danger'>Закрыть все вкладки кроме текущей</button>
+    </div>
+    <div class='footer'>
+      <div class='developer-info'>
+        <p>Разработал Max Zarev</p>
+        <div class='links'>
+          <a href='https://github.com/MaxZarev' target='_blank'>GitHub</a>
+          <a href='https://t.me/maxzarev' target='_blank'>Telegram</a>
+        </div>
+        <p class='version'>v 1.0.0</p>
+      </div>
+    </div>
+  </div>
+  <script src='popup.js'></script>
+</body>
+</html> 
