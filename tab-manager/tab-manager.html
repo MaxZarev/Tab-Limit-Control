@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset='UTF-8'>
+  <title>Управление вкладками - Tab Limit Control</title>
+  <link rel='stylesheet' href='tab-manager.css'>
+</head>
+<body>
+  <div class='container'>
+    <div class='header'>
+      <div class='header-content'>
+        <div class='header-left'>
+          <h1>Превышен лимит вкладок</h1>
+          <p class='subtitle'>Выберите вкладки для закрытия, чтобы открыть новую</p>
+        </div>
+        <div class='header-right'>
+          <button id='closeTab' class='close-tab-btn' title='Закрыть эту вкладку (Esc)'>✕</button>
+        </div>
+      </div>
+      <div class='stats'>
+        <span class='current-count'>Открыто: <span id='currentCount'>0</span></span>
+        <span class='limit'>Лимит: <span id='tabLimit'>20</span></span>
+        <span class='need-close'>Нужно закрыть: <span id='needToClose'>0</span></span>
+      </div>
+    </div>
+
+    <div class='main-content'>
+      <div class='left-panel'>
+        <div class='quick-actions'>
+          <button id='selectOldest' type='button'>Самые старые</button>
+          <button id='selectDuplicates' type='button'>Дубликаты</button>
+          <button id='selectByDomain' type='button'>По доменам</button>
+          <button id='clearSelection' type='button'>Очистить</button>
+        </div>
+
+        <div class='search-container'>
+          <input type='text' id='searchInput' placeholder='Поиск вкладок...'>
+        </div>
+
+        <div class='tabs-container'>
+          <div class='tabs-header'>
+            <label class='select-all-container'>
+              <input type='checkbox' id='selectAll'>
+              <span>Выбрать все</span>
+            </label>
+            <span class='selected-count'>Выбрано: <span id='selectedCount'>0</span></span>
+          </div>
+          
+          <div class='tabs-list' id='tabsList' tabindex='0'>
+            <!-- Вкладки будут добавлены динамически -->
+          </div>
+        </div>
+      </div>
+
+      <div class='right-panel'>
+        <div class='actions-panel'>
+          <h3>Действия</h3>
+          <button id='closeSelected' class='primary action-btn' disabled tabindex='0'>
+            <span class='btn-text'>Закрыть выбранные</span>
+            <span class='btn-hint'>Enter</span>
+          </button>
+          <button id='cancel' class='secondary action-btn' tabindex='0'>
+            <span class='btn-text'>Отмена</span>
+            <span class='btn-hint'>Esc</span>
+          </button>
+          
+          <div class='keyboard-hints'>
+            <div class='hint-group'>
+              <strong>Навигация:</strong>
+              <div>↑↓ - по списку</div>
+              <div>→ - к кнопкам</div>
+              <div>← - к списку</div>
+            </div>
+            <div class='hint-group'>
+              <strong>Действия:</strong>
+              <div>Space - выбор</div>
+              <div>/ - поиск</div>
+              <div>Ctrl+A - все</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class='footer'>
+      <p class='warning'>⚠️ Новая вкладка уже открыта и выделена в списке</p>
+    </div>
+  </div>
+
+  <script src='tab-manager.js'></script>
+</body>
+</html> 

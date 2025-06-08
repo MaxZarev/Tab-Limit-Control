@@ -13,11 +13,28 @@
         <label for='tabLimit'>Лимит вкладок:</label>
         <input type='number' id='tabLimit' min='1' max='100' value='20'>
       </div>
+      
+      <div class='behavior-settings'>
+        <h3>Поведение при превышении лимита</h3>
+        <div class='radio-group'>
+          <label class='radio-option'>
+            <input type='radio' name='behavior' value='manager' checked>
+            <span>Показать менеджер вкладок</span>
+          </label>
+          <label class='radio-option'>
+            <input type='radio' name='behavior' value='auto'>
+            <span>Автоматически закрывать старые</span>
+          </label>
+        </div>
+      </div>
+      
       <div class='current-tabs'>
         <span>Текущее количество вкладок: </span>
         <span id='currentTabCount'>0</span>
       </div>
-      <button id='saveSettings'>Сохранить</button>
+      
+      <button id='saveSettings'>Сохранить настройки</button>
+      <button id='openTabManager' class='secondary'>Открыть менеджер вкладок</button>
       <button id='closeOtherTabs' class='danger'>Закрыть все вкладки кроме текущей</button>
     </div>
     <div class='footer'>
@@ -27,7 +44,7 @@
           <a href='https://github.com/MaxZarev' target='_blank'>GitHub</a>
           <a href='https://t.me/maxzarev' target='_blank'>Telegram</a>
         </div>
-        <p class='version'>v 1.0.0</p>
+        <p class='version'>v 2.0.0</p>
       </div>
     </div>
   </div>

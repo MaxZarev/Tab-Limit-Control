@@ -1,8 +1,8 @@
 {
   "manifest_version": 3,
   "name": "Tab Limit Control",
-  "version": "1.0",
-  "description": "Контроль количества открытых вкладок в браузере",
+  "version": "2.0",
+  "description": "Современное расширение с темной темой для интеллектуального управления вкладками",
   "permissions": [
     "tabs",
     "storage"
@@ -32,7 +32,10 @@
       "icons/icon128.png",
       "icons/icon16_alert.png",
       "icons/icon48_alert.png",
-      "icons/icon128_alert.png"
+      "icons/icon128_alert.png",
+      "tab-manager/tab-manager.html",
+      "tab-manager/tab-manager.css",
+      "tab-manager/tab-manager.js"
     ],
     "matches": ["<all_urls>"]
   }],
